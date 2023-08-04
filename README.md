@@ -10,9 +10,9 @@
 
 ## Screenshots
 <!-- Insert screenshots of the app in action here -->
-<img src="https://github.com/kamranhccp/flutter-calculator-number-cruncher/assets/50527133/4d65426c-5370-4d80-aa62-cea48ef2b883" width="300">
-<img src="https://github.com/kamranhccp/flutter-calculator-number-cruncher/assets/50527133/29bca9cd-b421-4c29-b00f-92e8f22c4e42" width="300">
-<img src="https://github.com/kamranhccp/flutter-calculator-number-cruncher/assets/50527133/c1b77f6d-4bef-48fb-a7a9-4e62ec4603d8" width="300">
+<img src="https://github.com/kamranhccp/flutter-calculator-number-cruncher/assets/50527133/4d65426c-5370-4d80-aa62-cea48ef2b883" width="200">
+<img src="https://github.com/kamranhccp/flutter-calculator-number-cruncher/assets/50527133/29bca9cd-b421-4c29-b00f-92e8f22c4e42" width="200">
+<img src="https://github.com/kamranhccp/flutter-calculator-number-cruncher/assets/50527133/c1b77f6d-4bef-48fb-a7a9-4e62ec4603d8" width="200">
 
 ## Dependencies
 
