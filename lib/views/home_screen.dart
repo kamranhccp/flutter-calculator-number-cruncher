@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
@@ -76,243 +77,250 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                height: 200.0,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.black,
-                      Colors.black,
-                    ],
-                  ),
-                  color: Colors.white30,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20.0),
-                    bottomRight: Radius.circular(20.0),
-                    topLeft: Radius.circular(20.0),
-                    topRight: Radius.circular(20.0),
-                  ),
-                ),
-                alignment: Alignment.centerRight,
-                padding: const EdgeInsets.symmetric(
-                    vertical: 24.0, horizontal: 12.0),
-                child: Text(
-                  output,
-                  style: TextStyle(
-                    fontSize: output.length > 8 ? 48.0 : 78.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w300,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 48.0),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 8.0,
-                  right: 8.0,
-                  top: 8.0,
-                  bottom: 8.0,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    buildButton(
-                      "AC",
-                      color1: Colors.white60,
-                      color2: Colors.white60,
-                      textColor: Colors.black,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "+/-",
-                      color1: Colors.white60,
-                      color2: Colors.white60,
-                      textColor: Colors.black,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "%",
-                      color1: Colors.white60,
-                      color2: Colors.white60,
-                      textColor: Colors.black,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "/",
-                      color1: Colors.orange.shade600,
-                      color2: Colors.orange.shade600,
-                      textColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 8.0,
-                  right: 8.0,
-                  top: 8.0,
-                  bottom: 8.0,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    buildButton(
-                      "7",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "8",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "9",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "X",
-                      color1: Colors.orange.shade600,
-                      color2: Colors.orange.shade600,
-                      textColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 8.0,
-                  right: 8.0,
-                  top: 8.0,
-                  bottom: 8.0,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    buildButton(
-                      "4",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "5",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "6",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "-",
-                      color1: Colors.orange.shade600,
-                      color2: Colors.orange.shade600,
-                      textColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 8.0,
-                  right: 8.0,
-                  top: 8.0,
-                  bottom: 8.0,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    buildButton(
-                      "1",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "2",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "3",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "+",
-                      color1: Colors.orange.shade600,
-                      color2: Colors.orange.shade600,
-                      textColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 8.0,
-                  right: 8.0,
-                  top: 8.0,
-                  bottom: 8.0,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    buildButton(
-                      "0",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "00",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      ".",
-                      color1: Colors.white12.withOpacity(0.17),
-                      color2: Colors.white12.withOpacity(0.17),
-                      textColor: Colors.white,
-                    ),
-                    const SizedBox(width: 8),
-                    buildButton(
-                      "=",
-                      color1: Colors.orange.shade600,
-                      color2: Colors.orange.shade600,
-                      textColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-            ],
+        // app bar with title and history button
+        appBar: AppBar(
+          shadowColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(20.0.r),
+            ),
           ),
+          title: Text(
+            "Number Cruncher",
+            style: TextStyle(
+              fontSize: 20.0.sp,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.black,
+          actions: [
+            IconButton(
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all(
+                  CircleBorder(
+                    side: BorderSide(
+                      color: Colors.white,
+                      width: 1.0.w,
+                    ),
+                  ),
+                ),
+                padding: MaterialStateProperty.all(
+                  EdgeInsets.symmetric(horizontal: 12.0.w),
+                ),
+              ),
+              onPressed: () {},
+              icon: Icon(Icons.history),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.black,
+        body: Column(
+          children: [
+            Container(
+              height: 145.h,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.black,
+                    Colors.black,
+                  ],
+                ),
+                color: Colors.white30,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20.0.r),
+                ),
+              ),
+              alignment: Alignment.centerRight,
+              padding:
+                  EdgeInsets.symmetric(vertical: 24.0.h, horizontal: 12.0.w),
+              child: Text(
+                output,
+                style: TextStyle(
+                  fontSize: output.length > 8 ? 40.0.sp : 70.0.sp,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
+            ),
+            SizedBox(height: 5.0.h),
+            Padding(
+              padding: EdgeInsets.all(8.0.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  buildButton(
+                    "AC",
+                    color1: Colors.white60,
+                    color2: Colors.white60,
+                    textColor: Colors.black,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "+/-",
+                    color1: Colors.white60,
+                    color2: Colors.white60,
+                    textColor: Colors.black,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "%",
+                    color1: Colors.white60,
+                    color2: Colors.white60,
+                    textColor: Colors.black,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "/",
+                    color1: Colors.orange.shade600,
+                    color2: Colors.orange.shade600,
+                    textColor: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  buildButton(
+                    "7",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "8",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "9",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "X",
+                    color1: Colors.orange.shade600,
+                    color2: Colors.orange.shade600,
+                    textColor: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  buildButton(
+                    "4",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "5",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "6",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "-",
+                    color1: Colors.orange.shade600,
+                    color2: Colors.orange.shade600,
+                    textColor: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  buildButton(
+                    "1",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "2",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "3",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "+",
+                    color1: Colors.orange.shade600,
+                    color2: Colors.orange.shade600,
+                    textColor: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(8.0.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  buildButton(
+                    "0",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "00",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    ".",
+                    color1: Colors.white12.withOpacity(0.17),
+                    color2: Colors.white12.withOpacity(0.17),
+                    textColor: Colors.white,
+                  ),
+                  SizedBox(width: 8.0.w),
+                  buildButton(
+                    "=",
+                    color1: Colors.orange.shade600,
+                    color2: Colors.orange.shade600,
+                    textColor: Colors.white,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -324,7 +332,7 @@ class _HomeScreenState extends State<HomeScreen> {
       required Color textColor}) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50.0),
+        borderRadius: BorderRadius.circular(50.0.r),
         gradient: LinearGradient(
           colors: [
             color1,
@@ -337,7 +345,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50.0),
+            borderRadius: BorderRadius.circular(50.0.r),
           ),
           side: const BorderSide(
             color: Colors.transparent,
@@ -347,7 +355,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Text(
             buttonText,
             style: TextStyle(
-              fontSize: 28.0,
+              fontSize: 28.0.sp,
               fontWeight: FontWeight.w600,
               color: textColor,
             ),
