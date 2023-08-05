@@ -25,7 +25,10 @@
 
 This project utilizes the following dependency:
 
-flutter_launcher_icons: This package is used to generate the app icon for various platforms.
+##### 1. flutter_launcher_icons: 
+This package is used to generate the app icon for various platforms.
+##### 2. flutter_screenutil: 
+This package is used for Responsiveness.
 ## Getting Started
 ##### If this is your first time working with Flutter, don't worry! You can follow these steps to get started:
 
